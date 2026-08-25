@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "line";
+    src: url("fonts/LINESeedSansTH_W_Th.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "line";
+    src: url("fonts/LINESeedSansTH_W_Rg.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "line";
+    src: url("fonts/LINESeedSansTH_W_Bd.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "line";
+    src: url("fonts/LINESeedSansTH_W_XBd.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "scc";
+    src: url("fonts/SaoChingcha-Regular.otf") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "scc";
+    src: url("fonts/SaoChingcha-Light.otf") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "scc";
+    src: url("fonts/SaoChingcha-Bold.otf") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: "line";
+    color: white;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Parallax Background */
+.hero-bg {
+    position: absolute;
+    inset: -10%;
+    z-index: -2;
+
+    background-image: url("assets/polbuilding.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: translateY(0);
+    will-change: transform;
+}
+
+/* Gradient Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(to bottom,
+            #000 0%,
+            rgba(0, 0, 0, 0.75) 2%,
+            rgba(0, 0, 0, 0.1) 12%,
+            rgba(0, 0, 0, 0.1) 35%,
+            rgba(0, 0, 0, 0.75) 65%,
+            #000 88%);
+}
+
+/* Text */
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    color: #c3002f;
+    font-family: "scc";
+    font-size: clamp(3rem, 4vw, 7rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.hero p {
+    font-family: "line";
+    max-width: 600px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.5rem;
+}
+
+.hero-content button {
+    font-family: "line";
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 85vh;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Content below hero */
+.content {
+    font-family: "line";
+    min-height: 100vh;
+    padding: 100px 0;
+    background: #000;
+}
