@@ -108,11 +108,11 @@ body {
 
 /* Text */
 .hero-content {
-    text-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
     max-width: 850px;
 }
 
 .hero h1 {
+    text-shadow: 0 4px 1px rgba(0, 0, 0);
     color: #c3002f;
     font-family: "scc";
     font-size: clamp(3rem, 4vw, 7rem);
@@ -121,16 +121,13 @@ body {
 }
 
 .hero p {
+    text-shadow: 0 4px 15px rgba(0, 0, 0);
     font-family: "line";
     max-width: 600px;
     font-size: clamp(1rem, 2vw, 1.3rem);
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255);
     margin-top: 1.5rem;
-}
-
-.hero-content button {
-    font-family: "line";
 }
 
 /* Mobile */
